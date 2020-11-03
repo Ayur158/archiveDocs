@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>New person</title>
+</head>
+<body>
+<form th:method="POST" th:action="@{/documents}" th:object="${document}">
+    <label for="name">Название документа: </label>
+    <input type="text" th:field="*{name}" id="name"/>
+    <br/>
+    <label for="sender">Отправитель доукмента: </label>
+    <input type="text" th:field="*{sender}" id="sender"/>
+    <br/>
+    <input type="submit" value="Добавить">
+</form>
+</body>
+</html>
